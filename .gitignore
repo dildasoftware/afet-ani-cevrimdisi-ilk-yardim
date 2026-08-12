@@ -12,3 +12,8 @@ history_out.json
 send_questions.py
 check_kaynak.py
 fix_log.py
+
+*_output.json
+data/test.db
+scratch_*.py
+*.log
