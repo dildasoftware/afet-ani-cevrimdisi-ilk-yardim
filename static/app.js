@@ -223,12 +223,14 @@ function renderAnswer(question, data) {
   crumbCurrent.textContent = title;
 
   const stepsHtml = (data.sources || []).flatMap((src) =>
-    src.lines.map((line, i) => `
-      <div class="step">
-        <span class="step__n">${pad(i + 1)}</span>
-        <div class="step__body">${escapeHtml(line)}</div>
-      </div>
-    `)
+    src.lines.map((line) => {
+      const cleanLine = line.replace(/^\d+\.\s*/, '');
+      return `
+        <div class="step">
+          <div class="step__body">${escapeHtml(cleanLine)}</div>
+        </div>
+      `;
+    })
   ).join("");
 
   const srcDocs = [...new Set((data.sources || []).map((s) => s.doc))].join(", ");
@@ -265,7 +267,7 @@ function renderAnswer(question, data) {
 
       <div class="protocol__disclaimer">
         <strong>Uyarı</strong>
-        Bu bilgi tıbbi tavsiye yerine geçmez. Ciddi bir durumda hemen 112'yi arayın.
+        Bu bilgi genel bir kaynaktan alınmıştır, kişiye özel tıbbi tavsiye veya teşhis yerine geçmez. Emin olamadığınız veya hayati tehlike şüphesi olan HER durumda, beklemeden 112'yi arayın.
       </div>
     </div>
   `;
@@ -446,7 +448,6 @@ window.showHistoryItem = function(index) {
         let cleanLine = line.replace(/^\d+\.\s*/, '');
         html += `
           <div class="step">
-            <span class="step__n">${pad(stepCount)}</span>
             <div class="step__body">${escapeHtml(cleanLine)}</div>
           </div>
         `;
@@ -466,7 +467,7 @@ window.showHistoryItem = function(index) {
         </div>
         <div class="protocol__disclaimer">
           <strong>Uyarı</strong>
-          Bu bilgi tıbbi tavsiye yerine geçmez. Ciddi bir durumda hemen 112'yi arayın.
+          Bu bilgi genel bir kaynaktan alınmıştır, kişiye özel tıbbi tavsiye veya teşhis yerine geçmez. Emin olamadığınız veya hayati tehlike şüphesi olan HER durumda, beklemeden 112'yi arayın.
         </div>
       </div>
     </div>
@@ -590,13 +591,12 @@ window.loadDocument = async function(docName, docTitle) {
           <div class="protocol__body">
     `;
     
-    data.lines.forEach((line, idx) => {
-      // Satır numarasını (örn: "1. ") temizleyelim, numaralandırma zaten .step__n ile yapılıyor
+    data.lines.forEach((line) => {
+      // Satır numarasını (örn: "1. ") temizleyelim - içerik kendi numarasıyla geliyor
       // Regex: baştaki rakamlar, ardından nokta ve boşlukları sil
       let cleanLine = line.replace(/^\d+\.\s*/, '');
       html += `
         <div class="step">
-          <span class="step__n">${pad(idx + 1)}</span>
           <div class="step__body">${escapeHtml(cleanLine)}</div>
         </div>
       `;

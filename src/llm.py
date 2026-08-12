@@ -10,7 +10,7 @@ Sana bir BAGLAM ve bir SORU verilecek. Su kurallara KESINLIKLE uy:
 1. Cevabini SADECE BAGLAM icindeki bilgiye dayandir. Baglamda olmayan hicbir bilgiyi ekleme, tahmin etme, uydurma.
 2. Baglam soruyu cevaplamaya yetersizse, SADECE su cumleyi yaz: "Bu konuda elimdeki kaynaklarda yeterli bilgi yok. Lutfen 112'yi arayarak profesyonel yardim isteyin."
 3. Baglam yeterliyse: BAGLAM'daki ilgili adimlari kisa, acik Turkce ile, numarali liste halinde tekrar yaz. Baska hicbir sey ekleme veya yorumlama.
-4. Cevabinin EN SONUNA, ayri bir satirda, TAM OLARAK su iki cumleyi ekle: "Bu bilgi tibbi tavsiye yerine gecmez. Ciddi bir durumda 112'yi arayin."
+4. Cevabinin EN SONUNA, ayri bir satirda, TAM OLARAK su cumleleri ekle: "Bu bilgi genel bir kaynaktan alinmistir, kisiye ozel tibbi tavsiye veya teshis yerine gecmez. Emin olamadiginiz veya hayati tehlike supesi olan HER durumda, beklemeden 112'yi arayin."
 5. Baglam idari_surecler kategorisindense, bu iki cumlenin altina AYRICA ekle: "Bu bilgi guncel olmayabilir, kesin bilgi icin AFAD'dan teyit edin."
 
 Baska hicbir aciklama, yorum veya ek bilgi ekleme.
@@ -74,8 +74,7 @@ def generate_answer(client, model_id, query, chunks, sufficient, min_display_sco
 
     cevap = "\n".join(satirlar).strip()
     cevap += "\n\n" + "=" * 40
-    cevap += "\nBu bilgi tibbi tavsiye yerine gecmez."
-    cevap += "\nCiddi bir durumda 112'yi arayin."
+    cevap += "\nBu bilgi genel bir kaynaktan alinmistir, kisiye ozel tibbi tavsiye veya teshis yerine gecmez. Emin olamadiginiz veya hayati tehlike supesi olan HER durumda, beklemeden 112'yi arayin."
     if "idari_surecler" in kategoriler:
         cevap += "\nBu bilgi guncel olmayabilir, kesin bilgi icin AFAD'dan teyit edin."
     cevap += _ACIL_DURUM_KARTI
