@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 data/afet.db
 data/afet_backup_pre_contextual_embedding.db
-eval/results.json
 .env
 step2_utf8.txt
 step4_output.txt

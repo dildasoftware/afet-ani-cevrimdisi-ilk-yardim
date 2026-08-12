@@ -1,0 +1,1704 @@
+{
+  "meta": {
+    "timestamp": "2026-08-12T15:10:44.828190",
+    "total_questions": 20,
+    "k_values": [
+      3,
+      5
+    ]
+  },
+  "aggregate": {
+    "overall_content_metrics": {
+      "p@3": 0.5556,
+      "r@3": 0.4167,
+      "purity@3": 0.9722,
+      "p@5": 0.4833,
+      "r@5": 0.4792,
+      "purity@5": 0.9167,
+      "mrr": 0.6528
+    },
+    "fallback_accuracy": 0.875
+  },
+  "by_question_type": {
+    "normal": {
+      "count": 8,
+      "metrics": {
+        "p@3": 0.5417,
+        "r@3": 0.5,
+        "purity@3": 0.9583,
+        "p@5": 0.475,
+        "r@5": 0.5312,
+        "purity@5": 0.925,
+        "mrr": 0.6667
+      }
+    },
+    "age_specific": {
+      "count": 4,
+      "metrics": {
+        "p@3": 0.5833,
+        "r@3": 0.25,
+        "purity@3": 1.0,
+        "p@5": 0.5,
+        "r@5": 0.375,
+        "purity@5": 0.9,
+        "mrr": 0.625
+      }
+    },
+    "ambiguous": {
+      "count": 4,
+      "fallback_accuracy": 0.75
+    },
+    "out_of_scope": {
+      "count": 4,
+      "fallback_accuracy": 1.0
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Derin bir kesikten çok kan geliyor, ne yapmalıyım?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.47585,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.0,
+        "p@5": 0.0
+      },
+      "recall": {
+        "r@3": 0.0,
+        "r@5": 0.0
+      },
+      "mrr": 0.0,
+      "category_purity": {
+        "purity@3": 0.6667,
+        "purity@5": 0.6
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 250,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.03225806451612903,
+          "semantic_score": 0.4710201874169162,
+          "content_snippet": "5. Yanmış alandaki deriler kalkmadan giysileri çıkarın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 8,
+          "category": "deprem_davranisi",
+          "source_doc": "08_deprem_oncesi_hazirlik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "8. Ailenizle Çök-Kapan-Tutun hareketinin tatbikatını düzenli yapın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": false
+        },
+        {
+          "rank": 3,
+          "id": 264,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.4758504483945619,
+          "content_snippet": "5. Varsa kanamayı hemen durdurun.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 172,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "7. Kırık bölgede sık aralıklarla nabız, derinin rengi ve ısısını kontrol edin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 39,
+          "category": "deprem_davranisi",
+          "source_doc": "10_deprem_sonrasi_ve_yikinti_altinda.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.46284798979750935,
+          "content_snippet": "12. El ve ayaklarınızı kullanabiliyorsanız su, kalorifer veya gaz tesisatına, zemine vurarak varlığı...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Kanama nasıl durdurulur?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.579271,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 1.0,
+        "p@5": 1.0
+      },
+      "recall": {
+        "r@3": 0.5,
+        "r@5": 0.5
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 157,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.03278688524590164,
+          "semantic_score": 0.5792709744485285,
+          "content_snippet": "5. Yara ya da kanamayı değerlendirin.",
+          "matched_keywords": [
+            "yara"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 159,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.03225806451612903,
+          "semantic_score": 0.5781375996435455,
+          "content_snippet": "7. Kanama durmazsa, ilk bezi kaldırmadan üzerine ikinci bir bez koyup basıncı artırın.",
+          "matched_keywords": [
+            "bez"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 154,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.031009615384615385,
+          "semantic_score": 0.5421716662219479,
+          "content_snippet": "2. Yaralıyı sırt üstü yatırın.",
+          "matched_keywords": [
+            "yara"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 156,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "4. Tıbbi yardım isteyin (112).",
+          "matched_keywords": [
+            "yara"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 153,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.5465823483696425,
+          "content_snippet": "1. İlkyardımcı kendini tanıtır, yaralıyı sakinleştirir.",
+          "matched_keywords": [
+            "yara"
+          ],
+          "is_hit": true,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "CPR nasıl yapılır?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.617433,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.6667,
+        "p@5": 0.6
+      },
+      "recall": {
+        "r@3": 0.5,
+        "r@5": 0.75
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 188,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "11. Solunum yoksa devam edin.",
+          "matched_keywords": [
+            "solunum"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 186,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.6174326933785798,
+          "content_snippet": "9. Alından bastırıp çeneden kaldırarak başı geriye doğru itin; baş geri-çene yukarı pozisyonu verin.",
+          "matched_keywords": [
+            "bası"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 205,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Yanına diz çökün.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 193,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6014280045161129,
+          "content_snippet": "16. Ellerinizin parmakları göğüs kafesine temas etmeden, dirsekleriniz bükülmeden, göğüs kemiği üzer...",
+          "matched_keywords": [
+            "göğüs"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 182,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Hasta/yaralının yanına diz çökün.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Yanık yarasına nasıl müdahale edilir?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.612081,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 1.0,
+        "p@5": 0.8
+      },
+      "recall": {
+        "r@3": 0.5,
+        "r@5": 0.5
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 254,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.031746031746031744,
+          "semantic_score": 0.5928201435538503,
+          "content_snippet": "9. Yanık üzerine ilaç veya yanık merhemi gibi hiçbir madde sürmeyin.",
+          "matched_keywords": [
+            "su"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 259,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "14. Kimyasal yanıkta bölgeyi bol tazyiksiz suyla en az 15-20 dakika yıkayın; elektrik yanığında önce...",
+          "matched_keywords": [
+            "su"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 255,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.6120814368398099,
+          "content_snippet": "10. Yanık bölgeyi temiz bir bezle örtün, hasta/yaralıyı battaniyeyle örtün.",
+          "matched_keywords": [
+            "temiz"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 157,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Yara ya da kanamayı değerlendirin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 257,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6092732724517077,
+          "content_snippet": "12. Yanık geniş ve sağlık kuruluşu uzaksa, hastanın kusması yoksa ve bilinci açıksa, sıvı kaybını ön...",
+          "matched_keywords": [
+            "su"
+          ],
+          "is_hit": true,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Deprem sırasında ne yapmalıyım?",
+      "question_type": "normal",
+      "expected_category": "deprem_davranisi",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.620469,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.3333,
+        "p@5": 0.2
+      },
+      "recall": {
+        "r@3": 0.75,
+        "r@5": 0.75
+      },
+      "mrr": 0.3333,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 0.8
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 18,
+          "category": "deprem_davranisi",
+          "source_doc": "09_deprem_aninda_davranis.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Merdivenlere ya da çıkışlara doğru koşmayın; sarsıntı sırasında binayı terk etmeye çalışmayın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 14,
+          "category": "deprem_davranisi",
+          "source_doc": "09_deprem_aninda_davranis.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.6204694026210696,
+          "content_snippet": "1. Kesinlikle panik yapmayın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 8,
+          "category": "deprem_davranisi",
+          "source_doc": "08_deprem_oncesi_hazirlik.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "8. Ailenizle Çök-Kapan-Tutun hareketinin tatbikatını düzenli yapın.",
+          "matched_keywords": [
+            "çök",
+            "kapan",
+            "tutun"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 41,
+          "category": "deprem_davranisi",
+          "source_doc": "10_deprem_sonrasi_ve_yikinti_altinda.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6113950906169244,
+          "content_snippet": "14. Kapalı ve tozlu bir ortamdaysanız ağzınızı ve burnunuzu mendil veya kıyafetinizle kapatın; bağır...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 45,
+          "category": "idari_surecler",
+          "source_doc": "16_tahliye_barinma_hasar_hak.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "4. Başvuru sırasında afetzede olduğunuzu gösteren bir belge istenmez; başvuru sonrasında da belge ve...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Boğulan birine nasıl yardım ederim?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.48776,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.0,
+        "p@5": 0.0
+      },
+      "recall": {
+        "r@3": 0.0,
+        "r@5": 0.0
+      },
+      "mrr": 0.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 258,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "13. Tıbbi yardım isteyin (112).",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 240,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.4877599493468605,
+          "content_snippet": "4. Bir elinizle göğsünü destekleyerek öne eğilmesini sağlayın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 156,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "4. Tıbbi yardım isteyin (112).",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 245,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.4706774225052403,
+          "content_snippet": "9. Tıbbi yardım isteyin (112); gerekiyorsa temel yaşam desteğine geçin.\n\nKaynak: T.C. Sağlık Bakanlı...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 270,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Sakinleştirin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Kırık şüphesinde ne yapılır?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.545275,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.6667,
+        "p@5": 0.8
+      },
+      "recall": {
+        "r@3": 1.0,
+        "r@5": 1.0
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 170,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.032266458495966696,
+          "semantic_score": 0.5452750846518223,
+          "content_snippet": "5. Kırık şüphesi olan bölgeyi, ani hareketlerden kaçınarak bir alt ve bir üst eklemi de içine alacak...",
+          "matched_keywords": [
+            "tespit",
+            "hareket",
+            "sopa",
+            "eklem"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 172,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.03225806451612903,
+          "semantic_score": 0.5155564376106645,
+          "content_snippet": "7. Kırık bölgede sık aralıklarla nabız, derinin rengi ve ısısını kontrol edin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 171,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "6. Açık kırıklarda, tespitten önce yarayı temiz bir bezle kapatın.",
+          "matched_keywords": [
+            "tespit"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 176,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.4818912211885359,
+          "content_snippet": "11. Tespit sırasında yaralı bölgeyi sabit tutun; yara varsa üzerini temiz bir bezle kapatın; tespit ...",
+          "matched_keywords": [
+            "tespit"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 167,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.015625,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Yaralıyı hareket ettirmeyin, sıcak tutun.",
+          "matched_keywords": [
+            "hareket"
+          ],
+          "is_hit": true,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Şok belirtileri nelerdir?",
+      "question_type": "normal",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.69414,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.6667,
+        "p@5": 0.4
+      },
+      "recall": {
+        "r@3": 0.75,
+        "r@5": 0.75
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 268,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.03252247488101534,
+          "semantic_score": 0.6941397668730598,
+          "content_snippet": "9. Endişe ve korkularını gidererek psikolojik destek verin; yaşam bulgularını 2-3 dakikada bir değer...",
+          "matched_keywords": [
+            "nabız",
+            "solukluk"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 265,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.0315136476426799,
+          "semantic_score": 0.4821810624553047,
+          "content_snippet": "6. Şok pozisyonu verin: sırt üstü yatırıp bacaklarını 30 cm kadar yukarı kaldırarak altına destek ko...",
+          "matched_keywords": [
+            "bacaklarını"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 264,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.03125,
+          "semantic_score": 0.4212527674865124,
+          "content_snippet": "5. Varsa kanamayı hemen durdurun.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 248,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "3. Yaşam belirtilerini değerlendirin (ABC).",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 262,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "3. Hava yolunun açıklığını sağlayın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Bebeğe CPR nasıl yapılır?",
+      "question_type": "age_specific",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.668578,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 1.0,
+        "p@5": 0.8
+      },
+      "recall": {
+        "r@3": 0.5,
+        "r@5": 0.5
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 223,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.03200204813108039,
+          "semantic_score": 0.6365072880194961,
+          "content_snippet": "4. Bebeği sert bir zemin üzerine sırt üstü yatırın.",
+          "matched_keywords": [
+            "bebeğin"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 232,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.03149801587301587,
+          "semantic_score": 0.6296326973858488,
+          "content_snippet": "13. Bir elinizin orta ve yüzük parmağını bebeğin göğüs merkezine yerleştirin.",
+          "matched_keywords": [
+            "bebeğin",
+            "parmağını"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 220,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "1. Kendinizin ve bebeğin güvenliğinden emin olun.",
+          "matched_keywords": [
+            "bebeğin"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 227,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.6685783556474741,
+          "content_snippet": "8. Hava yolunu açmak için bir elinizi bebeğin alnına, diğer elinizin iki parmağını çene kemiğine koy...",
+          "matched_keywords": [
+            "bebeğin",
+            "parmağını"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 233,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6425617955912962,
+          "content_snippet": "14. Göğüs kemiğini 4 cm aşağı inecek şekilde (göğüs yüksekliğinin 1/3'ü kadar) 30 kalp basısı uygula...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Çocukta CPR nasıl yapılır?",
+      "question_type": "age_specific",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.636914,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 1.0,
+        "p@5": 0.6
+      },
+      "recall": {
+        "r@3": 0.25,
+        "r@5": 0.25
+      },
+      "mrr": 1.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 204,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.03200204813108039,
+          "semantic_score": 0.6103593022012344,
+          "content_snippet": "4. Çocuğu sert bir zemin üzerine sırt üstü yatırın.",
+          "matched_keywords": [
+            "çocuğun"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 212,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.03076923076923077,
+          "semantic_score": 0.6077655603490943,
+          "content_snippet": "12. Baş geri-çene yukarı pozisyonunda çocuğun ağzını içine alacak şekilde ağzınızı yerleştirin.",
+          "matched_keywords": [
+            "çocuğun"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 201,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "1. Kendinizin ve çocuğun güvenliğinden emin olun.",
+          "matched_keywords": [
+            "çocuğun"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 209,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.6369140040243146,
+          "content_snippet": "9. Alından bastırıp çeneden kaldırarak başı geriye doğru itin; baş geri-çene yukarı pozisyonu verin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 216,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6156140679406304,
+          "content_snippet": "16. Göğüs kemiğini 5 cm aşağı inecek şekilde (göğüs yüksekliğinin 1/3'ü kadar) 30 kalp basısı uygula...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "Donma ve hipotermide ne yapılır?",
+      "question_type": "age_specific",
+      "expected_category": "tibbi_ilk_yardim",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.690754,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.3333,
+        "p@5": 0.6
+      },
+      "recall": {
+        "r@3": 0.25,
+        "r@5": 0.75
+      },
+      "mrr": 0.5,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 1.0
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 270,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.03278688524590164,
+          "semantic_score": 0.6907539063721825,
+          "content_snippet": "2. Sakinleştirin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 273,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.03200204813108039,
+          "semantic_score": 0.6627244258319662,
+          "content_snippet": "5. Sıcak içecekler verin.",
+          "matched_keywords": [
+            "içecekler"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 271,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.03149801587301587,
+          "semantic_score": 0.6539904097242112,
+          "content_snippet": "3. Kesin istirahata alın, hareket ettirmeyin.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 269,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.031009615384615385,
+          "semantic_score": 0.643379150403649,
+          "content_snippet": "1. Hasta/yaralıyı ılık bir ortama alarak soğukla temasını kesin.",
+          "matched_keywords": [
+            "ılık"
+          ],
+          "is_hit": true,
+          "category_match": true
+        },
+        {
+          "rank": 5,
+          "id": 272,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "4. Kuru giysiler giydirin.",
+          "matched_keywords": [
+            "kuru"
+          ],
+          "is_hit": true,
+          "category_match": true
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Fiziksel engelli birey deprem anında ne yapmalı?",
+      "question_type": "age_specific",
+      "expected_category": "kirilgan_gruplar",
+      "expected_has_sufficient_context": true,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.66679,
+      "fallback_success": true,
+      "precision": {
+        "p@3": 0.0,
+        "p@5": 0.0
+      },
+      "recall": {
+        "r@3": 0.0,
+        "r@5": 0.0
+      },
+      "mrr": 0.0,
+      "category_purity": {
+        "purity@3": 1.0,
+        "purity@5": 0.6
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 57,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11a_fiziksel_engelli_hazirlik.md",
+          "rrf_score": 0.03252247488101534,
+          "semantic_score": 0.6667901720544854,
+          "content_snippet": "1. Her odada yanına veya altına sığınabileceğiniz sağlam bir eşya (sabitlenmiş beyaz eşya, masa vb.)...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 2,
+          "id": 62,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11a_fiziksel_engelli_hazirlik.md",
+          "rrf_score": 0.03149801587301587,
+          "semantic_score": 0.5749173089236349,
+          "content_snippet": "6. Destek kişilerinizle nereden, nasıl ve ne zaman iletişime geçileceğini önceden kararlaştırın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 3,
+          "id": 63,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11a_fiziksel_engelli_hazirlik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "7. Yangın durumunda kesinlikle asansör kullanmayın; merdiven kullanın.",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": true
+        },
+        {
+          "rank": 4,
+          "id": 27,
+          "category": "deprem_davranisi",
+          "source_doc": "09_deprem_aninda_davranis.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.6009615205314603,
+          "content_snippet": "14. Metro veya trendeyseniz kesinlikle inmeyin; sıkıca tutturulmuş bir yere tutunun, personel talima...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": false
+        },
+        {
+          "rank": 5,
+          "id": 41,
+          "category": "deprem_davranisi",
+          "source_doc": "10_deprem_sonrasi_ve_yikinti_altinda.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.5849787875087795,
+          "content_snippet": "14. Kapalı ve tozlu bir ortamdaysanız ağzınızı ve burnunuzu mendil veya kıyafetinizle kapatın; bağır...",
+          "matched_keywords": [],
+          "is_hit": false,
+          "category_match": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "question": "Çok korkuyorum, ne yapabilirim?",
+      "question_type": "ambiguous",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.441529,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 132,
+          "category": "psikolojik_destek",
+          "source_doc": "14b_psikolojik_ilkyardim_yapin_yapmayin.md",
+          "rrf_score": 0.03177805800756621,
+          "semantic_score": 0.4415292090409885,
+          "content_snippet": "7. Mağduru hizmet kaynaklarına yönlendirin; daha fazla yardımın geldiği biliniyorsa bu bilgiyi payla..."
+        },
+        {
+          "rank": 2,
+          "id": 117,
+          "category": "psikolojik_destek",
+          "source_doc": "14a_psikolojik_ilkyardim_sureci.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "4. \"Size yardım etmek için ne yapabilirim?\" veya \"Nasılsınız?\" gibi genel sorularla başlayın."
+        },
+        {
+          "rank": 3,
+          "id": 205,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Yanına diz çökün."
+        },
+        {
+          "rank": 4,
+          "id": 14,
+          "category": "deprem_davranisi",
+          "source_doc": "09_deprem_aninda_davranis.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.3980074069656387,
+          "content_snippet": "1. Kesinlikle panik yapmayın."
+        },
+        {
+          "rank": 5,
+          "id": 182,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Hasta/yaralının yanına diz çökün."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "question": "Biri hasta oldu",
+      "question_type": "ambiguous",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.420079,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 144,
+          "category": "psikolojik_destek",
+          "source_doc": "14c_cocuklarla_afet_sonrasi_iletisim.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "3. Bu yaş grubundaki çocuk olaydan kendini sorumlu tutabilir (örn. \"ben yaramazlık yaptım, bu yüzden..."
+        },
+        {
+          "rank": 2,
+          "id": 243,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.4200787298246236,
+          "content_snippet": "7. Bir elinizin başparmağını midenin üst kısmına, göğüs kemiği altına gelecek şekilde yumruk yapıp k..."
+        },
+        {
+          "rank": 3,
+          "id": 261,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Hasta/yaralıyı sırt üstü yatırın."
+        },
+        {
+          "rank": 4,
+          "id": 165,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.41122581744760006,
+          "content_snippet": "13. Yaşam bulgularını 2-3 dakikada bir değerlendirin, hızlı sevkini sağlayın.\n\nKaynak: T.C. Sağlık B..."
+        },
+        {
+          "rank": 5,
+          "id": 182,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Hasta/yaralının yanına diz çökün."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Yardım lazım",
+      "question_type": "ambiguous",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": true,
+      "top_semantic_score": 0.534564,
+      "fallback_success": false,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 258,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "05_yanik.md",
+          "rrf_score": 0.032266458495966696,
+          "semantic_score": 0.5081676753232182,
+          "content_snippet": "13. Tıbbi yardım isteyin (112)."
+        },
+        {
+          "rank": 2,
+          "id": 277,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.5345636799455599,
+          "content_snippet": "9. Tıbbi yardım isteyin (112).\n\nKaynak: T.C. Sağlık Bakanlığı Temel Sağlık Hizmetleri Genel Müdürlüğ..."
+        },
+        {
+          "rank": 3,
+          "id": 156,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "4. Tıbbi yardım isteyin (112)."
+        },
+        {
+          "rank": 4,
+          "id": 245,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.5342191551412235,
+          "content_snippet": "9. Tıbbi yardım isteyin (112); gerekiyorsa temel yaşam desteğine geçin.\n\nKaynak: T.C. Sağlık Bakanlı..."
+        },
+        {
+          "rank": 5,
+          "id": 270,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "07_donma_hipotermi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Sakinleştirin."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "question": "Nasıl iyi olunur?",
+      "question_type": "ambiguous",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.340458,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 179,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Hasta/yaralının omuzlarına dokunup \"iyi misiniz?\" diye sorarak bilincini kontrol edin; bilinci yo..."
+        },
+        {
+          "rank": 2,
+          "id": 241,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.3404579935799275,
+          "content_snippet": "5. Diğer elinizin topuğuyla hızla 5 kez sırtına (kürek kemikleri arasına) vurun; tıkanıklık açıldıys..."
+        },
+        {
+          "rank": 3,
+          "id": 202,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Çocuğun omuzlarına dokunup \"iyi misiniz?\" diye sorarak bilincini kontrol edin; bilinci yoksa deva..."
+        },
+        {
+          "rank": 4,
+          "id": 243,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.33973864994501973,
+          "content_snippet": "7. Bir elinizin başparmağını midenin üst kısmına, göğüs kemiği altına gelecek şekilde yumruk yapıp k..."
+        },
+        {
+          "rank": 5,
+          "id": 67,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11b_gorme_engelli_hazirlik.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Yaşam alanınızdaki eşyaların yerlerini iyi bilin; eşyaları alternatif geçiş yollarına imkan verec..."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "question": "Yarın hava nasıl olacak?",
+      "question_type": "out_of_scope",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.375748,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 262,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.03177805800756621,
+          "semantic_score": 0.37574800809714287,
+          "content_snippet": "3. Hava yolunun açıklığını sağlayın."
+        },
+        {
+          "rank": 2,
+          "id": 157,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "01_kanama_kontrolu.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Yara ya da kanamayı değerlendirin."
+        },
+        {
+          "rank": 3,
+          "id": 171,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "02_kirik_cikik_burkulma.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "6. Açık kırıklarda, tespitten önce yarayı temiz bir bezle kapatın."
+        },
+        {
+          "rank": 4,
+          "id": 263,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "06_sok.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.3497820864338295,
+          "content_snippet": "4. Mümkün olduğunca temiz hava solumasını sağlayın."
+        },
+        {
+          "rank": 5,
+          "id": 193,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "16. Ellerinizin parmakları göğüs kafesine temas etmeden, dirsekleriniz bükülmeden, göğüs kemiği üzer..."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "question": "Türkiye'nin başkenti neresi?",
+      "question_type": "out_of_scope",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.300739,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 118,
+          "category": "psikolojik_destek",
+          "source_doc": "14a_psikolojik_ilkyardim_sureci.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "5. Kişiyi konuşmaya veya iletişime zorlamayın; reddederse kendinizi tanıtıp nerede bulunabileceğiniz..."
+        },
+        {
+          "rank": 2,
+          "id": 231,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03c_cpr_bebek.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.3007392368683559,
+          "content_snippet": "12. Kalp basısı için bebeğin göğüs merkezini (iki meme başının altındaki hattın ortası) belirleyin."
+        },
+        {
+          "rank": 3,
+          "id": 62,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11a_fiziksel_engelli_hazirlik.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "6. Destek kişilerinizle nereden, nasıl ve ne zaman iletişime geçileceğini önceden kararlaştırın."
+        },
+        {
+          "rank": 4,
+          "id": 56,
+          "category": "iletisim_kaynaklar",
+          "source_doc": "15_acil_numaralar_kurumlar.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.27374312543733637,
+          "content_snippet": "8. 112'yi ararken sakin olun, sorulan sorulara net cevap verin, olayın olduğu yere yakın bilinen bir..."
+        },
+        {
+          "rank": 5,
+          "id": 190,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.27251102184117476,
+          "content_snippet": "13. Kalp basısı için göğüs kemiğinin alt ve üst ucunu tespit edip alt yarısına bir elinizin topuğunu..."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "question": "En iyi restoran önerir misin?",
+      "question_type": "out_of_scope",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.292488,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 179,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03_cpr_temel_yasam_destegi.md",
+          "rrf_score": 0.032266458495966696,
+          "semantic_score": 0.28961988154478324,
+          "content_snippet": "2. Hasta/yaralının omuzlarına dokunup \"iyi misiniz?\" diye sorarak bilincini kontrol edin; bilinci yo..."
+        },
+        {
+          "rank": 2,
+          "id": 245,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "04_bogulma_heimlich.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.2924877855104649,
+          "content_snippet": "9. Tıbbi yardım isteyin (112); gerekiyorsa temel yaşam desteğine geçin.\n\nKaynak: T.C. Sağlık Bakanlı..."
+        },
+        {
+          "rank": 3,
+          "id": 202,
+          "category": "tibbi_ilk_yardim",
+          "source_doc": "03b_cpr_cocuk.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Çocuğun omuzlarına dokunup \"iyi misiniz?\" diye sorarak bilincini kontrol edin; bilinci yoksa deva..."
+        },
+        {
+          "rank": 4,
+          "id": 47,
+          "category": "idari_surecler",
+          "source_doc": "16_tahliye_barinma_hasar_hak.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.28986590259049266,
+          "content_snippet": "6. Binanızın hasar durumunu hasartespit.csb.gov.tr adresinden sorgulayabilirsiniz."
+        },
+        {
+          "rank": 5,
+          "id": 67,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11b_gorme_engelli_hazirlik.md",
+          "rrf_score": 0.015873015873015872,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Yaşam alanınızdaki eşyaların yerlerini iyi bilin; eşyaları alternatif geçiş yollarına imkan verec..."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "question": "Python programlama dili nedir?",
+      "question_type": "out_of_scope",
+      "expected_category": null,
+      "expected_has_sufficient_context": false,
+      "actual_has_sufficient_context": false,
+      "top_semantic_score": 0.307459,
+      "fallback_success": true,
+      "precision": {
+        "p@3": null,
+        "p@5": null
+      },
+      "recall": {
+        "r@3": null,
+        "r@5": null
+      },
+      "mrr": null,
+      "category_purity": {
+        "purity@3": null,
+        "purity@5": null
+      },
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "id": 116,
+          "category": "psikolojik_destek",
+          "source_doc": "14a_psikolojik_ilkyardim_sureci.md",
+          "rrf_score": 0.03125,
+          "semantic_score": 0.24208056516569118,
+          "content_snippet": "3. Kişiyi aktif olarak dinleyin; beden diline ve ses tonuna dikkat edin, söylediklerini özetleyerek ..."
+        },
+        {
+          "rank": 2,
+          "id": 82,
+          "category": "kirilgan_gruplar",
+          "source_doc": "11d_dil_konusma_engelli_hazirlik.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.0,
+          "content_snippet": "2. Yedek defter ve kalem her zaman yanınızda bulunsun."
+        },
+        {
+          "rank": 3,
+          "id": 117,
+          "category": "psikolojik_destek",
+          "source_doc": "14a_psikolojik_ilkyardim_sureci.md",
+          "rrf_score": 0.01639344262295082,
+          "semantic_score": 0.30745932196717274,
+          "content_snippet": "4. \"Size yardım etmek için ne yapabilirim?\" veya \"Nasılsınız?\" gibi genel sorularla başlayın."
+        },
+        {
+          "rank": 4,
+          "id": 108,
+          "category": "kirilgan_gruplar",
+          "source_doc": "13_afet_cantasi_ozel_malzemeler.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.0,
+          "content_snippet": "10. Dil/konuşma engelliyseniz: kelime-harf tablosu, önceden basılmış anahtar cümleler, güç dönüştürü..."
+        },
+        {
+          "rank": 5,
+          "id": 114,
+          "category": "psikolojik_destek",
+          "source_doc": "14a_psikolojik_ilkyardim_sureci.md",
+          "rrf_score": 0.016129032258064516,
+          "semantic_score": 0.28775376231629846,
+          "content_snippet": "1. Kendinizi tanıtın: hangi kurumdan olduğunuzu ve isminizi belirtin, konuşmak için izin isteyin."
+        }
+      ]
+    }
+  ]
+}
