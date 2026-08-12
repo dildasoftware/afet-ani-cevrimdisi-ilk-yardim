@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afet Anı · İlk Yardım Komuta Merkezi</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SOL SÜTUN ============ -->
+  <aside class="side">
+
+    <div class="brand">
+      <div class="brand__mark" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L3 6v6c0 5.2 3.8 9.7 9 11 5.2-1.3 9-5.8 9-11V6l-9-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="brand__text">
+        <p class="brand__name">Afet Anı</p>
+        <p class="brand__tag">Komuta Merkezi</p>
+      </div>
+      <span class="brand__ver">v1.0</span>
+    </div>
+
+    <div class="node">
+      <div class="node__row">
+        <span class="node__label">Yerel Düğüm</span>
+        <span class="node__badge">
+          <span class="node__dot"></span>
+          Aktif
+        </span>
+      </div>
+      <p class="node__val">Çevrimdışı RAG</p>
+
+      <div class="node__mini">
+        <div class="node__mini-row">
+          <span class="node__mini-k">Model</span>
+          <span class="node__mini-v">phi-3.5</span>
+        </div>
+        <div class="node__mini-row">
+          <span class="node__mini-k">Embed</span>
+          <span class="node__mini-v">qwen3-0.6b</span>
+        </div>
+        <div class="node__mini-row">
+          <span class="node__mini-k">Depo</span>
+          <span class="node__mini-v">SQLite + FTS5</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="side__hdr">Modüller</p>
+
+    <nav class="menu">
+      <button class="menu__item is-active" id="homeBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span>Komuta Merkezi</span>
+        <kbd class="menu__key">1</kbd>
+      </button>
+      <button class="menu__item" id="protocolsBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <rect x="4" y="3" width="16" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M9 3v18M4 9h5" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span>Protokoller</span>
+        <kbd class="menu__key">2</kbd>
+      </button>
+      <button class="menu__item" id="mapBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6l6-2 4 2 6-2v14l-6 2-4-2-6 2V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M10 4v14M14 6v14" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+        <span>Bölge Haritası</span>
+        <kbd class="menu__key">3</kbd>
+      </button>
+      <button class="menu__item" id="historyBtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Vaka Geçmişi</span>
+        <kbd class="menu__key">4</kbd>
+      </button>
+    </nav>
+
+    <p class="side__hdr" style="margin-top:20px">Canlı Gecikme</p>
+    <div class="latency">
+      <div class="latency__val">
+        <span id="latencyNum">0.12</span>
+        <span class="latency__unit">s</span>
+      </div>
+      <p class="latency__lbl">Ortalama yanıt süresi</p>
+      <div class="latency__chart">
+        <canvas id="latencyChart" width="200" height="42"></canvas>
+      </div>
+    </div>
+
+    <div class="side__spacer"></div>
+
+    <button class="menu__item menu__item--settings">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>Sistem Ayarları</span>
+    </button>
+  </aside>
+
+  <!-- ============ ORTA SÜTUN ============ -->
+  <main class="main">
+
+    <header class="topbar">
+      <nav class="crumbs">
+        <button class="crumbs__item">Komuta Merkezi</button>
+        <span class="crumbs__sep">/</span>
+        <span class="crumbs__current" id="crumbCurrent">Başlangıç</span>
+      </nav>
+
+      <div class="topbar__id">
+        <span class="topbar__id-lbl">ID</span>
+        <span class="topbar__id-val" id="sessionId">RESP-0000</span>
+        <span class="topbar__sync">
+          <span class="topbar__sync-dot"></span>
+          Senkronize
+        </span>
+      </div>
+
+      <div class="topbar__search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="text" placeholder="Protokol ara…" class="topbar__search-input">
+        <kbd class="topbar__search-key">⌘K</kbd>
+      </div>
+
+      <div class="topbar__utils">
+        <button class="icon-btn" aria-label="Yazdır">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <rect x="6" y="14" width="12" height="7" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </button>
+        <button class="icon-btn icon-btn--notify" aria-label="Bildirimler">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="icon-btn__badge">2</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hızlı kategori sekmeleri -->
+    <div class="chips-wrap">
+      <p class="chips__lbl">Hızlı Protokol</p>
+      <nav class="chips" id="chips">
+        <button class="chip" data-prompt="Kanama nasıl durdurulur?">
+          <span class="chip__code">K1</span>
+          <span class="chip__name">Kanama Durdurma</span>
+          <span class="chip__tag chip__tag--red">Hayati</span>
+        </button>
+        <button class="chip" data-prompt="CPR nasıl yapılır?">
+          <span class="chip__code">K3</span>
+          <span class="chip__name">CPR / Kalp Masajı</span>
+          <span class="chip__tag chip__tag--red">Hayati</span>
+        </button>
+        <button class="chip" data-prompt="Deprem sırasında ne yapmalıyım?">
+          <span class="chip__code">D1</span>
+          <span class="chip__name">Deprem Anı</span>
+          <span class="chip__tag chip__tag--amber">Afet</span>
+        </button>
+        <button class="chip" data-prompt="Yanık yarasına nasıl müdahale edilir?">
+          <span class="chip__code">K5</span>
+          <span class="chip__name">Yanık İntihabı</span>
+          <span class="chip__tag chip__tag--amber">Acil</span>
+        </button>
+        <button class="chip" data-prompt="Boğulan birine nasıl yardım ederim?">
+          <span class="chip__code">K4</span>
+          <span class="chip__name">Boğulma</span>
+          <span class="chip__tag chip__tag--red">Hayati</span>
+        </button>
+        <button class="chip" data-prompt="Kırık şüphesinde ne yapılır?">
+          <span class="chip__code">K2</span>
+          <span class="chip__name">Kırık / Burkulma</span>
+          <span class="chip__tag chip__tag--amber">Acil</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="scene" id="scene">
+
+      <!-- Başlangıç durumu -->
+      <div class="empty" id="emptyState">
+
+        <div class="empty__grid">
+          <div class="empty__left">
+            <div class="empty__mark">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L3 6v6c0 5.2 3.8 9.7 9 11 5.2-1.3 9-5.8 9-11V6l-9-4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="empty__eyebrow">
+              <span class="empty__eyebrow-dot"></span>
+              Komuta Merkezi Aktif
+            </p>
+            <h1 class="empty__title">Durumu tanımlayın.<br>Protokol açılsın.</h1>
+            <p class="empty__sub">
+              Alttaki komut girişine yazın veya üstteki hızlı protokol sekmelerinden birini seçin.
+              Yanıtlar yalnızca <strong>277 doğrulanmış kaynaktan</strong> birebir alınır.
+            </p>
+
+            <div class="empty__cues">
+              <div class="cue">
+                <span class="cue__key"><kbd>/</kbd></span>
+                <span>Komut girişine odaklan</span>
+              </div>
+              <div class="cue">
+                <span class="cue__key"><kbd>!112</kbd></span>
+                <span>Acil durum kartı (bypass)</span>
+              </div>
+              <div class="cue">
+                <span class="cue__key"><kbd>Esc</kbd></span>
+                <span>Kartı kapat</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="empty__right">
+            <p class="empty__side-lbl">Sistem Durumu</p>
+            <div class="stats">
+              <div class="stat">
+                <p class="stat__k">Aktif Kaynak</p>
+                <p class="stat__v" id="statCount" data-target="277">0</p>
+                <div class="stat__trend stat__trend--ok">+ %100 senkron</div>
+              </div>
+              <div class="stat">
+                <p class="stat__k">Doküman</p>
+                <p class="stat__v">24</p>
+                <div class="stat__trend">6 kategori</div>
+              </div>
+              <div class="stat">
+                <p class="stat__k">Doğrulama</p>
+                <p class="stat__v stat__v--ok">%87.5</p>
+                <div class="stat__trend stat__trend--ok">7/8 fallback</div>
+              </div>
+              <div class="stat">
+                <p class="stat__k">Precision@3</p>
+                <p class="stat__v">0.56</p>
+                <div class="stat__trend stat__trend--ok">+ %18 iyileşme</div>
+              </div>
+            </div>
+
+            <div class="gauge">
+              <p class="gauge__lbl">Retrieval Doğruluk Endeksi</p>
+              <div class="gauge__track">
+                <div class="gauge__fill" style="width:0" id="gaugeFill"></div>
+                <div class="gauge__markers" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="gauge__meta">
+                <span>0.00</span>
+                <span id="gaugeVal">0.56</span>
+                <span>1.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="dock">
+      <div class="dock__title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M8 3h13v11H8V3zM8 21h13v-7H8v7zM3 6a3 3 0 0 1 3-3M3 6v12M3 18a3 3 0 0 0 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Komut Girişi</span>
+        <span class="dock__hint">Enter · gönder &nbsp; · &nbsp; !112 · acil kart</span>
+      </div>
+      <form class="dock__form" id="composerForm">
+        <span class="dock__prompt">›</span>
+        <input
+          type="text"
+          id="questionInput"
+          class="dock__input"
+          placeholder="Durumu rapor edin veya komut girin…"
+          autocomplete="off"
+        />
+        <button type="submit" class="dock__send" aria-label="Gönder">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </footer>
+  </main>
+
+  <!-- ============ SAĞ SÜTUN ============ -->
+  <aside class="log">
+
+    <div class="log__head">
+      <div>
+        <p class="log__title">Son Kritik Eylemler</p>
+        <p class="log__sub">Gerçek zamanlı sistem günlüğü</p>
+      </div>
+      <span class="log__count" id="logCount">01</span>
+    </div>
+
+    <div class="log__list" id="logList">
+      <article class="event">
+        <div class="event__meta">
+          <span class="event__time" id="bootTime">--:--:--</span>
+          <span class="event__dot event__dot--ok"></span>
+        </div>
+        <p class="event__title">Sistem Başlatıldı</p>
+        <p class="event__body">Çevrimdışı mod aktif. 277 kaynak indekslendi.</p>
+      </article>
+    </div>
+
+    <div class="authorities">
+      <p class="authorities__lbl">Kaynak Otoriteleri</p>
+      <div class="authorities__grid">
+        <div class="auth">
+          <span class="auth__mark">SB</span>
+          <div class="auth__text">
+            <p class="auth__name">Sağlık Bakanlığı</p>
+            <p class="auth__cnt">124 kaynak</p>
+          </div>
+        </div>
+        <div class="auth">
+          <span class="auth__mark">AF</span>
+          <div class="auth__text">
+            <p class="auth__name">AFAD</p>
+            <p class="auth__cnt">87 kaynak</p>
+          </div>
+        </div>
+        <div class="auth">
+          <span class="auth__mark">KZ</span>
+          <div class="auth__text">
+            <p class="auth__name">Kızılay</p>
+            <p class="auth__cnt">42 kaynak</p>
+          </div>
+        </div>
+        <div class="auth">
+          <span class="auth__mark">İS</span>
+          <div class="auth__text">
+            <p class="auth__name">İSMEP</p>
+            <p class="auth__cnt">24 kaynak</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="log__foot">
+      <div class="log__foot-row">
+        <span class="log__foot-k">Oturum</span>
+        <span class="log__foot-v" id="sessionClock">00:00</span>
+      </div>
+      <div class="log__foot-row">
+        <span class="log__foot-k">Bağlantı</span>
+        <span class="log__foot-v log__foot-v--ok">Yerel · 0.12s</span>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- S.O.S butonu -->
+<button class="sos" id="emergencyBtn" type="button" aria-label="Acil durum modu">
+  <span class="sos__ring sos__ring--1"></span>
+  <span class="sos__ring sos__ring--2"></span>
+  <span class="sos__inner">
+    <span class="sos__icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+      </svg>
+    </span>
+    <span class="sos__text">S.O.S</span>
+  </span>
+  <span class="sos__badge">112</span>
+</button>
+
+<!-- ACİL DURUM OVERLAY -->
+<div class="ec-overlay" id="emergencyOverlay" aria-hidden="true">
+  <div class="ec-card">
+    <header class="ec-card__head">
+      <div class="ec-card__head-left">
+        <span class="ec-card__head-tag">Acil Durum Kartı</span>
+        <span class="ec-card__head-id">EC-0001 · Aciliyet: Kritik</span>
+      </div>
+      <span class="ec-card__head-num">112</span>
+    </header>
+
+    <div class="ec-card__body">
+      <p class="ec-card__eyebrow">Ne Yapmalı</p>
+      <h3 class="ec-card__title">Hemen 112'yi arayın.<br>Sakin kalın.</h3>
+
+      <div class="ec-card__quote">
+        <p class="ec-card__eyebrow">Söyleyebileceğiniz cümle</p>
+        <p class="ec-card__q">"<em>[Bulunduğunuz yer]</em> adresinde, <em>[durum]</em> var. Yardım gerekiyor."</p>
+      </div>
+
+      <ol class="ec-card__list">
+        <li><span class="ec-card__n">01</span> Mümkünse yaralıyı hareket ettirmeyin.</li>
+        <li><span class="ec-card__n">02</span> Adresi ve kaç kişi olduğunuzu net söyleyin.</li>
+        <li><span class="ec-card__n">03</span> Telefonu 112 kapatana kadar kapatmayın.</li>
+      </ol>
+
+      <button class="ec-card__close" id="closeEmergency" type="button">
+        <span>Kapat</span>
+        <kbd>Esc</kbd>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

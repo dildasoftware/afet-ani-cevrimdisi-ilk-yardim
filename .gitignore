@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+data/afet.db
+data/afet_backup_pre_contextual_embedding.db
+eval/results.json
+.env
+step2_utf8.txt
+step4_output.txt
+step4_utf8.txt
+history_out.json
+send_questions.py
+check_kaynak.py
+fix_log.py

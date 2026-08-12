@@ -1,0 +1,4 @@
+foundry-local-sdk
+openai
+fastapi
+uvicorn[standard]

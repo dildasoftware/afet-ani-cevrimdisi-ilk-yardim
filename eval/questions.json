@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "question": "Derin bir kesikten çok kan geliyor, ne yapmalıyım?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["bastırın", "basıncı", "turnike"]
+  },
+  {
+    "id": 2,
+    "question": "Kanama nasıl durdurulur?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["baskı", "bez", "turnike", "yara"]
+  },
+  {
+    "id": 3,
+    "question": "CPR nasıl yapılır?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["göğüs", "solunum", "bası", "30"]
+  },
+  {
+    "id": 4,
+    "question": "Yanık yarasına nasıl müdahale edilir?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["soğuk", "patlatmayın", "temiz", "su"]
+  },
+  {
+    "id": 5,
+    "question": "Deprem sırasında ne yapmalıyım?",
+    "question_type": "normal",
+    "expected_category": "deprem_davranisi",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["çök", "kapan", "tutun", "masa"]
+  },
+  {
+    "id": 6,
+    "question": "Boğulan birine nasıl yardım ederim?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["heimlich", "öksürmeye", "tıkanmada", "yumruk"]
+  },
+  {
+    "id": 7,
+    "question": "Kırık şüphesinde ne yapılır?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["tespit", "hareket", "sopa", "eklem"]
+  },
+  {
+    "id": 8,
+    "question": "Şok belirtileri nelerdir?",
+    "question_type": "normal",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["bacaklarını", "nabız", "solukluk", "sıcak"]
+  },
+  {
+    "id": 9,
+    "question": "Bebeğe CPR nasıl yapılır?",
+    "question_type": "age_specific",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["bebeğin", "tabanına", "parmağını", "meme"]
+  },
+  {
+    "id": 10,
+    "question": "Çocukta CPR nasıl yapılır?",
+    "question_type": "age_specific",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["çocuğun", "omuzlarına", "tur", "topuğunu"]
+  },
+  {
+    "id": 11,
+    "question": "Donma ve hipotermide ne yapılır?",
+    "question_type": "age_specific",
+    "expected_category": "tibbi_ilk_yardim",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["ılık", "ovmayın", "kuru", "içecekler"]
+  },
+  {
+    "id": 12,
+    "question": "Fiziksel engelli birey deprem anında ne yapmalı?",
+    "question_type": "age_specific",
+    "expected_category": "kirilgan_gruplar",
+    "expected_has_sufficient_context": true,
+    "relevant_chunk_keywords": ["tekerlekli", "kilitle", "sandalye", "eldiveni"]
+  },
+  {
+    "id": 13,
+    "question": "Çok korkuyorum, ne yapabilirim?",
+    "question_type": "ambiguous",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 14,
+    "question": "Biri hasta oldu",
+    "question_type": "ambiguous",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 15,
+    "question": "Yardım lazım",
+    "question_type": "ambiguous",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 16,
+    "question": "Nasıl iyi olunur?",
+    "question_type": "ambiguous",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 17,
+    "question": "Yarın hava nasıl olacak?",
+    "question_type": "out_of_scope",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 18,
+    "question": "Türkiye'nin başkenti neresi?",
+    "question_type": "out_of_scope",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 19,
+    "question": "En iyi restoran önerir misin?",
+    "question_type": "out_of_scope",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  },
+  {
+    "id": 20,
+    "question": "Python programlama dili nedir?",
+    "question_type": "out_of_scope",
+    "expected_category": null,
+    "expected_has_sufficient_context": false,
+    "relevant_chunk_keywords": []
+  }
+]
