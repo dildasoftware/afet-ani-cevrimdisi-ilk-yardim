@@ -25,6 +25,62 @@ Bu dosya, projenin geliştirme sürecini ve alınan kararları takip eder.
 - 06_sok.md'de "Şok belirtileri:" gömülü bir alt-blok var, Kaynak: kalıbından farklı, henüz ayrıştırılmadı (kozmetik, düşük öncelik - "cila turu"nda ele alınacak)
 - README.md, web arayüzü/API eklenmeden ÖNCEKİ haliyle kaldı, güncellenmesi gerekiyor
 
+---
+
+## Oturum: Frontend UX İyileştirmeleri + README + Eval Kanıtı (12 Ağustos — Devam)
+
+> **Not:** Bu oturum aynı gün içinde Web Arayüzü oturumunun devamıdır, ayrı log girişi gerektiriyor çünkü farklı commit'lere karşılık gelir.
+
+### Tamamlanan İşler (commit: `fb14216`)
+- **Scroll düzeltmesi:** Sohbet alanı yeni mesaj geldiğinde otomatik alta kayıyor, eski taşma sorunu giderildi
+- **Adım numaralandırma temizliği:** Retrieval'dan dönen adım metinlerinde kaynak dokümanın kendi numaraları çift sayıldığında oluşan `1. 1. Adım` formatı temizlendi
+- **Güvenlik uyarı metni güçlendirildi:** Her yanıtın altına yasal sorumluluk reddi eklendi: *"Bu sistem, resmi kaynaklardan derlenmiş genel bilgi sunar; tıbbi personel yerine geçmez."* Mevcut CSS sınıfı kullanıldı, yeni stil eklenmedi
+
+### README Güncellemesi (commit: `b3d042a`)
+- README.md, web arayüzü ve API eklenmesiyle birlikte güncellendi; kurulum, kullanım ve mimari açıklama eksiksiz hale getirildi
+- ~~"README güncellenmesi gerekiyor" backlog kalemi KAPANDI~~
+
+### Eval Kanıtı Repoya Eklendi (commit: `f20d6f0`)
+- `eval/` çıktıları (Precision@3=0.5556, Fallback=%87.5) kalıcı kanıt olarak GitHub'a gönderildi
+
+### Temizlik (commit: `2f9685f`, `3686c3d`)
+- Geçici test/debug dosyaları silindi: `backend_test.py`, `visual_check.py`, `measure.py`, `step3.py`
+- Analiz scriptleri `docs/` klasörüne taşındı, eski prototip soru seti silindi
+
+---
+
+## Oturum: Canlı Test + Staj Sunumu GitHub Push (18–19 Ağustos)
+
+### Amaç
+Projeyi sıfırdan çalıştırıp uçtan uca canlı test etmek; staj sunumunu repoya göndermek.
+
+### Ortam Doğrulaması
+| Bileşen | Sürüm / Durum |
+|---|---|
+| Python | 3.12.4 ✅ |
+| foundry-local-sdk | 1.2.4 ✅ |
+| openai | 2.52.0 ✅ |
+| fastapi | 0.129.2 ✅ |
+| uvicorn | 0.41.0 ✅ |
+| SQLite DB (afet.db ~6.7 MB) | ✅ |
+
+### Canlı Test Sonuçları
+- **Sunucu:** `http://localhost:8000` — tam aktif
+- **Yanıt süresi:** `0.12s` (LLM-free template retrieval sayesinde)
+- **Aktif kaynak:** 277 chunk / 24 belge / 6 kategori
+- **Doğrulama:** %87.5 | **Precision@3:** 0.5556
+
+**Test sorusu:** *"Kanama durumunda ne yapmalıyım?"*
+- Protokol: `KNM-01` (Kanama Kontrol Protokolü), aciliyet: Yüksek
+- Kaynak: `01_kanama_kontrolu.md`, `06_sok.md` — doğru kategoriden doğru chunk'lar döndü
+
+### Staj Sunumu Git Operasyonu
+1. `SUNUM.md` yanlışlıkla commit'lendi → `c563f8e` ile geri alındı
+2. Doğru `SUNUM/` klasörü (pptx + pdf) `9b8bc87` commit'iyle push edildi
+
+### Doğrulama Durumu
+19 Ağustos oturumunda hiçbir kaynak kod değişikliği yapılmadı. Tüm metrikler (Precision@3, Fallback oranı) değişmeden kaldı. Bu oturum salt operasyonel doğrulama + deployment niteliğindedir.
+
 ### Doğrulama Durumu
 Tüm yeni özellikler ham JSON çıktılarıyla test edildi. eval/run_eval.py metrikleri (Precision@3=0.5556, Fallback=%87.5) oturum boyunca hiç değişmedi - hiçbir değişiklik retrieval mantığına dokunmadı.
 - 6 hızlı sekme (K1-K6) + Deprem (D1) regresyon testi: 7/7 geçti, her biri doğru kategori ve has_sufficient_context=true döndürdü.
